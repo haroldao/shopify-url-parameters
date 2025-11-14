@@ -10,7 +10,7 @@ When working with Shopify URLs, you can use various query parameters and JSON en
 - `?sort_by=<filter>`: Applies a filter for the collection page, allowing users to sort or display items based on certain parameters (e.g., ?sort_by=price-ascending).
 - `?customer_posted=<true|false>`: Used after submitting forms related to customer data (e.g., after submitting a contact form)
 - `?q=<search-query>`: Performs a search on the store based on the query entered (e.g., ?q=shoes).
-- `?ab=<?>`: Used for ?
+- `?ab=<?>`: Used to enable/disable the preview bar. (Deprecated as of[ July 12, 2025](https://shopify.dev/changelog/the-ab-cookie-will-no-longer-be-set))
 - `?sc=<?>`: Used for ?
 - `?variant=<variant-id>`: Automatically selects a specific variant on the product page when loading (e.g., ?variant=123456789).
 - `?checkout[shipping_address][country]=<country>`: Prefills checkout fields, in this case, the shipping country.
