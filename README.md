@@ -13,13 +13,14 @@ When working with Shopify URLs, you can use various query parameters and JSON en
 - `?ab=<?>`: Used to enable/disable the preview bar. (Deprecated as of[ July 12, 2025](https://shopify.dev/changelog/the-ab-cookie-will-no-longer-be-set))
 - `?sc=<?>`: Used for ?
 - `?variant=<variant-id>`: Automatically selects a specific variant on the product page when loading (e.g., ?variant=123456789).
+- `?selling_plan=<selling_plan>`: Selects a specific selling plan (e.g., ?selling_plan=123456789).
 - `?checkout[shipping_address][country]=<country>`: Prefills checkout fields, in this case, the shipping country.
 - `?preview_theme_id=<theme-id>`: Allows you to preview a specific theme on your store without publishing it.
 - `?preview_privacy_banner=1`: Allows you to preview the cookie privacy banner.
 - `?page=<page-number>`: Used for pagination on collection pages, allowing users to navigate between multiple pages of products.
 - `?type=<collection-type>`: Collection type query to filter products by specific types.
 - `?filter=<filter-query>`: Applies filtering options to collections, such as price or tag filters.
-- `?limit=<number>`: Applies custom pagination limit. Useful for querying products on a store in bulk, or retrieving a small subset of products for a specific collection.
+- `?limit=<number>`: Applies a custom pagination limit. Useful for querying products on a store in bulk, or retrieving a small subset of products for a specific collection.
 - `?accelerated-checkout-preview=<true|false>`: Toggle the accelerated checkout preview by setting it to true to enable or false to disable.
 
 ### Shopify (JSON) Endpoints:
@@ -31,7 +32,7 @@ When working with Shopify URLs, you can use various query parameters and JSON en
 - `/search/suggest.json?q=<query>&resources[type]=product`: Provides product search suggestions in JSON format based on the query.
 - `/pages/<page-handle>.json`: Retrieves details for a specific page in JSON format.
 - `/challenge`: Redirects to a challenge page, which Shopify uses for security purposes, like verifying the user is human when suspicious behavior is detected.
-- `/variants/<variant-id>`: Redirects to product page with variant preselected.
+- `/variants/<variant-id>`: Redirects to a product page with the variant preselected.
 - `/meta.json`: Retrieves store metadata.
 - `/browsing_context_suggestions.json`: Retrieves geolocation data.
 - `/products.json`: Retrieves all products on the store (paginated).
